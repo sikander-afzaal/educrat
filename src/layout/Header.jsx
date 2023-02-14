@@ -34,7 +34,7 @@ const Header = () => {
             >
               Contact
             </a>
-            <div className="flex lg:hidden justify-center items-center gap-6">
+            <div className="flex flex-col lg:hidden justify-center items-center gap-6">
               <a href="#" className="text-lg font-normal text-darkIndigo">
                 Log in
               </a>

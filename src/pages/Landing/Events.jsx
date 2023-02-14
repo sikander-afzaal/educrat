@@ -1,99 +1,44 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useEffect, useRef } from "react";
-import InstructorBox from "../../components/InstructorBox";
+import EventBox from "../../components/EventBox";
 
-const Instructors = () => {
+const Events = () => {
   const DUMMY__DATA = [
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
     {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
-    },
-    {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
-    },
-    {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
-    },
-    {
-      img: "/user.png",
-      urls: { twitter: "#", linkedin: "#", fb: "#", insta: "#" },
-      name: "Floyed Miles",
-      role: "President of Sales",
-      rating: "4.5",
-      students: "692",
-      courses: "15",
+      location: "London, UK",
+      date: "15 JUNE",
+      title: "Medical Chemistry: The Molecular Basis",
     },
   ];
   const container = useRef();
@@ -102,7 +47,7 @@ const Instructors = () => {
   useEffect(() => {
     const ArrowTranslationCalculation = () => {
       const dotsContainer = document.querySelector(
-        ".instructor-slide .splide__pagination"
+        ".event-slider .splide__pagination"
       );
       const dotsContainerWidth = dotsContainer.clientWidth;
       const widthToBeMoved = dotsContainerWidth + leftArrow.current.clientWidth;
@@ -120,25 +65,23 @@ const Instructors = () => {
       window.removeEventListener("resize", ArrowTranslationCalculation);
     };
   }, []);
-
   return (
-    <div className="wrapper mt-24">
-      <div className="contain lg:flex-row flex-col justify-between items-center lg:items-start gap-[50px] sm:gap-[100px]">
-        <div className="gap-5 flex justify-start items-center lg:items-start lg:text-left text-center flex-col max-w-[340px]">
-          <h3 className="title">Learn from the best instructors</h3>
-          <p className="sub">
-            Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit.
-            Felis donec massa aliquam id dolor .
-          </p>
-          <button className="text-orange bg-[#E8543E26] w-[220px] h-[50px] border-0 hover:bg-orange hover:text-white transition-all duration-300 rounded-lg text-base flex justify-center items-center gap-3">
-            View All İnstructors{" "}
+    <div className="wrapper mt-16">
+      <div className="contain justify-start items-start flex-col ">
+        <div className="flex w-full justify-between sm:flex-row flex-col items-center gap-4">
+          <div className="flex justify-start items-start flex-col gap-1">
+            <h3 className="title">Upcoming Events</h3>
+            <p className="sub">10,000+ unique online course list designs</p>
+          </div>
+          <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-full h-[50px] w-[220px]  px-[29px] border-none flex justify-around items-center gap-4 text-purple text-[15px] font-normal">
+            Browse Event
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-4 h-4"
+              className="w-5 h-5"
             >
               <path
                 strokeLinecap="round"
@@ -150,36 +93,40 @@ const Instructors = () => {
         </div>
         <div
           ref={container}
-          className="flex overflow-x-hidden pb-[100px] justify-center items-center w-full"
+          className="w-full mt-10 overflow-hidden pb-[100px]"
         >
           <Splide
             options={{
               pauseOnHover: false,
-              perPage: 3,
-              gap: "20px",
+              perPage: 4,
+              gap: "30px",
               width: "100%",
               autoplay: true,
+              //   autoWidth: true,
               pagination: true,
               arrows: true,
               type: "loop",
               perMove: 1,
               breakpoints: {
                 1280: {
+                  perPage: 3,
+                },
+                970: {
                   perPage: 2,
                 },
-                510: {
+                650: {
                   perPage: 1,
                 },
               },
             }}
             hasTrack={false}
-            className="instructor-slide"
+            className="event-slider"
           >
             <SplideTrack>
               {DUMMY__DATA.map((elem, idx) => {
                 return (
-                  <SplideSlide key={idx + new Date()}>
-                    <InstructorBox {...elem} />
+                  <SplideSlide key={idx + new Date() + "event"}>
+                    <EventBox {...elem} />
                   </SplideSlide>
                 );
               })}
@@ -231,4 +178,4 @@ const Instructors = () => {
   );
 };
 
-export default Instructors;
+export default Events;

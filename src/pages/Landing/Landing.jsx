@@ -1,4 +1,5 @@
 import Categories from "./Categories";
+import Events from "./Events";
 import Hero from "./Hero";
 import Instructors from "./Instructors";
 import Learn from "./Learn";
@@ -18,6 +19,7 @@ const Landing = () => {
       <Skills />
       <Instructors />
       <Register />
+      <Events />
     </div>
   );
 };

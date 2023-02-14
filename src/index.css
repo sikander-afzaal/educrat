@@ -88,6 +88,12 @@
   width: max-content;
   padding: 0px !important;
 }
+.event-slider .splide__pagination {
+  top: 100%;
+}
+.event-slider .splide__arrow {
+  top: 103%;
+}
 .splide__pagination__page.is-active {
   background-color: #6440fb !important;
   transform: scale(1) !important;
@@ -97,4 +103,8 @@
   opacity: 1 !important;
   width: 8px !important;
   height: 8px !important;
+}
+
+.event-slider .splide__track {
+  padding-bottom: 50px;
 }

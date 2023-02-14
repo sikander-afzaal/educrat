@@ -4,7 +4,7 @@ import {
   StackedCarousel,
   ResponsiveContainer,
 } from "react-stacked-center-carousel";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Learn = () => {
   const slides = [
@@ -51,6 +51,15 @@ const Learn = () => {
   ];
   const ref = useRef();
   const [currentSlideIdx, setCurrentSlideIdx] = useState(0);
+  //autoplay funtionaliy slider
+  useEffect(() => {
+    const interval = setInterval(() => {
+      ref.current.swipeTo(1);
+    }, 5000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <div className="lg:pb-[220px] relative isolate py-[80px] lg:pt-[120px] bg-darkIndigo maskTrusted wrapper mt-16">
@@ -143,10 +152,11 @@ const Learn = () => {
                     maxVisibleSlide={3}
                     height={350}
                     useGrabCursor
+                    transitionTime={1000}
                     onActiveSlideChange={(newCenterDataIndex) =>
                       setCurrentSlideIdx(newCenterDataIndex)
                     }
-                    swipeThreshold={100}
+                    swipeThreshold={50}
                     // currentVisibleSlide={currentVisibleSlide}
                   />
                 );

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import PopularCourseBox from "../../components/PopularCourseBox";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 const Popular = () => {
   const DATA = [
@@ -108,9 +110,18 @@ const Popular = () => {
           <p className="sub">10,000+ unique online course list designs</p>
         </div>
         <div className="flex w-full justify-center sm:flex-row flex-col items-center gap-5 mt-5">
-          <PopularDropDown name="Category" />
-          <PopularDropDown name="Rating" />
-          <PopularDropDown name="Difficulty" />
+          <PopularDropDown
+            name="Category"
+            options={["Web Dev", "Photoshop", "Drawing"]}
+          />
+          <PopularDropDown
+            name="Rating"
+            options={["5", "4.5", "4", "3", "2", "1"]}
+          />
+          <PopularDropDown
+            name="Difficulty"
+            options={["Hard", "Medium", "Beginner"]}
+          />
         </div>
         <div className="w-full grid auto-rows-fr mt-3 grid-cols-fluid gap-6">
           {DATA.map((elem) => {
@@ -127,11 +138,20 @@ const Popular = () => {
 
 export default Popular;
 
-const PopularDropDown = ({ name }) => {
+const PopularDropDown = ({ name, options }) => {
+  const [activeDrop, setActiveDrop] = useState(false);
+  const [dropVal, setDropVal] = useState(name);
+  const handleClickOutside = () => {
+    setActiveDrop(false);
+  };
+  const dropRef = useOutsideClick(handleClickOutside);
   return (
-    <div className="flex w-full justify-center items-center flex-col">
-      <button className="w-full sm:w-[143px] h-[40px] flex justify-between items-center px-3 bg-[#EEF2F6] rounded-lg text-nightBlue text-sm font-normal border-none ">
-        {name}{" "}
+    <div className="relative flex w-full sm:w-auto justify-center items-center flex-col">
+      <button
+        onClick={() => setActiveDrop((prev) => !prev)}
+        className="w-full sm:w-[143px] h-[40px] flex justify-between items-center px-3 bg-[#EEF2F6] rounded-lg text-nightBlue text-sm font-normal border-none capitalize "
+      >
+        {dropVal}{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -147,6 +167,27 @@ const PopularDropDown = ({ name }) => {
           />
         </svg>
       </button>
+      {activeDrop && (
+        <div
+          ref={dropRef}
+          className="flex absolute top-full left-0 w-full justify-start items-start flex-col bg-[#EEF2F6] rounded-br-lg rounded-bl-lg  px-2 py-2"
+        >
+          {options.map((elem, idx) => {
+            return (
+              <p
+                key={idx + elem + new Date()}
+                onClick={(e) => {
+                  setActiveDrop(false);
+                  setDropVal(e.target.innerText);
+                }}
+                className="text-sm cursor-pointer hover:bg-nightBlue hover:text-white transition-all duration-150 w-full rounded-lg text-nightBlue capitalize px-2 py-2"
+              >
+                {elem}
+              </p>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
