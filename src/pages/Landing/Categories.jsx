@@ -4,41 +4,49 @@ import CategoryBox from "../../components/CategoryBox";
 const Categories = () => {
   const CATEGORIES__DATA = [
     {
+      filter: "companies",
       name: "Digtal Marketing",
       img: "/cat1.png",
       courses: "573+",
     },
     {
+      filter: "market",
       name: "Web Development",
       img: "/cat2.png",
       courses: "573+",
     },
     {
+      filter: "everyone",
       name: "Graphic Design",
       img: "/cat3.png",
       courses: "573+",
     },
     {
+      filter: "healthcare",
       name: "Social Sciences",
       img: "/cat4.png",
       courses: "573+",
     },
     {
+      filter: "everyone",
       name: "Photohraphy",
       img: "/cat5.png",
       courses: "573+",
     },
     {
+      filter: "market",
       name: "Art & Humanities",
       img: "/cat6.png",
       courses: "573+",
     },
     {
+      filter: "healthcare",
       name: "Personal Development",
       img: "/cat7.png",
       courses: "573+",
     },
     {
+      filter: "companies",
       name: "IT and Software",
       img: "/cat8.png",
       courses: "573+",
@@ -124,7 +132,10 @@ const Categories = () => {
           </div>
         </div>
         <div className="grid gap-5 mt-10 sm:mt-16 place-items-center grid-cols-fluid w-full auto-rows-[100px]">
-          {CATEGORIES__DATA.map((elem) => {
+          {CATEGORIES__DATA.filter((elem) => {
+            if (selectedCategory === "all") return elem;
+            return selectedCategory === elem.filter ? elem : "";
+          }).map((elem) => {
             return <CategoryBox key={elem.name} {...elem} />;
           })}
         </div>
