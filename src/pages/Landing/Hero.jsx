@@ -22,7 +22,7 @@ const Hero = () => {
               className="w-full pl-4 border-none outline-none h-full text-dusk text-[15px] font-normal bg-transparent"
               placeholder="What do you want to learn today?"
             />
-            <button className="bg-sunglow rounded-full h-[50px] min-w-[120px] sm:min-w-[150px] flex justify-center items-center gap-2 text-darkIndigo font-normal text-base hover:bg-transparent border-2 border-solid border-sunglow transition-all duration-300">
+            <button className="bg-sunglow font-medium rounded-full h-[50px] min-w-[120px] sm:min-w-[150px] flex justify-center items-center gap-2 text-darkIndigo text-base hover:bg-transparent border-2 border-solid border-sunglow transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

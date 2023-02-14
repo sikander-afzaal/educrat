@@ -9,9 +9,27 @@ const PopularCourseBox = ({
   teacher,
   price,
   discount,
+  popular,
+  best,
+  newCourse,
 }) => {
   return (
-    <div className="flex bg-white shadow-shadow1 justify-start items-start flex-col gap-3 rounded-lg overflow-hidden border border-solid border-[#ededed]">
+    <div className="flex relative bg-white shadow-shadow1 justify-start items-start flex-col gap-3 rounded-lg overflow-hidden border border-solid border-[#ededed]">
+      {popular && (
+        <p className="font-medium text-white text-xs absolute top-3 left-3 rounded-full bg-purple px-[17px] h-[30px] flex justify-center uppercase items-center">
+          Popular
+        </p>
+      )}
+      {newCourse && (
+        <p className="font-medium text-white text-xs absolute top-3 left-3 rounded-full bg-orange px-[17px] h-[30px] flex justify-center uppercase items-center">
+          new
+        </p>
+      )}
+      {best && (
+        <p className="font-medium text-nightBlue text-xs absolute top-3 right-3 rounded-full bg-[#00FF84] px-[17px] h-[30px] flex justify-center uppercase items-center">
+          Best seller
+        </p>
+      )}
       <img src={banner} className="w-full h-[210px] object-cover" alt="" />
       <div className="w-full px-5 pb-4 flex justify-start items-start flex-col gap-2">
         <div className="flex justify-start items-center gap-2">
@@ -39,7 +57,7 @@ const PopularCourseBox = ({
           </div>
           <p className="text-dusk text-[13px]">(1991)</p>
         </div>
-        <h3 className="text-nightBlue text-[17px] font-normal">{title}</h3>
+        <h3 className="text-nightBlue text-[17px] font-medium">{title}</h3>
         <div className="flex mt-1 justify-between w-full items-center gap-2">
           <div className="flex text-dusk justify-center items-center gap-1">
             <svg
@@ -99,8 +117,10 @@ const PopularCourseBox = ({
             <p className="text-dusk text-sm">{teacher}</p>
           </div>
           <div className="flex justify-center items-center gap-2">
-            <p className="text-[15px] line-through text-dusk">${price}</p>
-            <p className="text-lg  text-nightBlue">${discount}</p>
+            <p className="text-[15px] font-medium line-through text-dusk">
+              ${price}
+            </p>
+            <p className="text-lg font-medium  text-nightBlue">${discount}</p>
           </div>
         </div>
       </div>

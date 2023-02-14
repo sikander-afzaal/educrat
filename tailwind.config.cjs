@@ -27,6 +27,7 @@ module.exports = {
         shadow1: "0px 6px 15px rgba(64, 79, 104, 0.05)",
         shadow2: "0px 60px 120px rgba(9, 14, 24, 0.2)",
         shadow3: "0px 25px 10px rgba(1, 33, 58, 0.07)",
+        shadow4: "0px 25px 70px rgba(1, 33, 58, 0.07)",
       },
     },
   },

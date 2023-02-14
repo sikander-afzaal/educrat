@@ -45,7 +45,7 @@ const Trusted = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-nightBlue">
+              <p className="text-[15px] font-medium text-nightBlue">
                 Last Education of Bachelor Degree
               </p>
             </div>
@@ -66,7 +66,7 @@ const Trusted = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-nightBlue">
+              <p className="text-[15px] font-medium text-nightBlue">
                 More Than 15 Years Experience
               </p>
             </div>
@@ -87,12 +87,12 @@ const Trusted = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-nightBlue">
+              <p className="text-[15px] font-medium text-nightBlue">
                 12 Education Award Winning
               </p>
             </div>
           </div>
-          <button className="text-white bg-darkIndigo w-[204px] h-[55px] border-2 border-solid border-darkIndigo hover:bg-transparent hover:text-darkIndigo transition-all duration-300 rounded-lg text-base">
+          <button className="text-white font-medium bg-darkIndigo w-[204px] h-[55px] border-2 border-solid border-darkIndigo hover:bg-transparent hover:text-darkIndigo transition-all duration-300 rounded-lg text-base">
             See More
           </button>
         </div>

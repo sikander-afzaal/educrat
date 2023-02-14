@@ -43,9 +43,9 @@ const InstructorBox = ({
             clipRule="evenodd"
           />
         </svg>
-        <p className="text-inherit text-sm">{rating}</p>
+        <p className="text-inherit text-sm font-medium">{rating}</p>
       </div>
-      <h4 className="capitalize text-[17px] text-nightBlue font-normal">
+      <h4 className="capitalize text-[17px] text-nightBlue font-medium">
         {name}
       </h4>
       <h4 className="text-[15px] -mt-2 text-dusk font-normal">{role}</h4>

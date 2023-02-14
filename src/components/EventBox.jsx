@@ -5,7 +5,9 @@ const EventBox = ({ date, title, location }) => {
         <p className="w-min text-center rounded-lg min-w-[60px] px-2 aspect-square bg-darkIndigo flex justify-center items-center uppercase text-white text-[15px]">
           {date}
         </p>
-        <p className="text-[17px]  text-nightBlue">{title}</p>
+        <p className="text-[17px]  text-nightBlue font-medium leading-[1.3]">
+          {title}
+        </p>
       </div>
       <div className="flex justify-start items-center gap-3">
         <svg

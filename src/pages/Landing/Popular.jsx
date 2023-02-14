@@ -26,6 +26,8 @@ const Popular = () => {
       level: "Beginner",
       teacher: "Ali Turfan",
       price: "179",
+      popular: true,
+      best: true,
       discount: "79",
     },
     {
@@ -39,6 +41,7 @@ const Popular = () => {
       teacher: "Ali Turfan",
       price: "179",
       discount: "79",
+      newCourse: true,
     },
     {
       banner: "/popular.png",
@@ -51,6 +54,7 @@ const Popular = () => {
       teacher: "Ali Turfan",
       price: "179",
       discount: "79",
+      popular: true,
     },
     {
       banner: "/popular.png",
@@ -63,6 +67,8 @@ const Popular = () => {
       teacher: "Ali Turfan",
       price: "179",
       discount: "79",
+      newCourse: true,
+      best: true,
     },
     {
       banner: "/popular.png",
@@ -86,6 +92,7 @@ const Popular = () => {
       level: "Beginner",
       teacher: "Ali Turfan",
       price: "179",
+      best: true,
       discount: "79",
     },
     {
@@ -128,7 +135,7 @@ const Popular = () => {
             return <PopularCourseBox {...elem} key={elem.title} />;
           })}
         </div>
-        <button className="rounded-lg mt-6 text-nightBlue text-base font-normal bg-transparent hover:bg-[#ededed]  border-2 border-[#ededed] border-solid w-[228px] h-[60px] transition-all duration-300">
+        <button className="rounded-lg mt-6 text-nightBlue text-base font-medium bg-transparent hover:bg-[#ededed]  border-2 border-[#ededed] border-solid w-[228px] h-[60px] transition-all duration-300">
           View All Courses
         </button>
       </div>

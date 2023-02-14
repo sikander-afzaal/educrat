@@ -35,7 +35,9 @@ const Skills = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-white">Hand-picked authors</p>
+              <p className="text-[15px] font-medium text-white">
+                Hand-picked authors
+              </p>
             </div>
             <div className="flex justify-start items-center gap-3">
               <div className="bg-purple flex justify-center items-center text-white rounded-full aspect-square w-[25px]">
@@ -54,7 +56,7 @@ const Skills = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-white">
+              <p className="text-[15px] font-medium text-white">
                 Easy to follow curriculum
               </p>
             </div>
@@ -75,7 +77,7 @@ const Skills = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-white">Free courses</p>
+              <p className="text-[15px] font-medium text-white">Free courses</p>
             </div>
             <div className="flex justify-start items-center gap-3">
               <div className="bg-purple flex justify-center items-center text-white rounded-full aspect-square w-[25px]">
@@ -94,7 +96,9 @@ const Skills = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[15px] text-white">Money-back guarantee</p>
+              <p className="text-[15px] font-medium text-white">
+                Money-back guarantee
+              </p>
             </div>
           </div>
         </div>

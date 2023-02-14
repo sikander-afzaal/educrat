@@ -9,7 +9,7 @@ const ReviewBox = React.memo(function ({ data, dataIndex, slideIndex }) {
       className="flex select-none bg-white rounded-lg py-5 px-5 sm:px-10 justify-start items-start flex-col w-full max-w-[430px] gap-4"
     >
       <div className="w-full flex justify-between items-center gap-2">
-        <h4 className="text-purple text-lg font-normal">{title}</h4>
+        <h4 className="text-purple text-lg font-medium">{title}</h4>
         <svg
           width="37"
           height="26"
@@ -23,7 +23,7 @@ const ReviewBox = React.memo(function ({ data, dataIndex, slideIndex }) {
           />
         </svg>
       </div>
-      <p className="text-[15px] mt-3 font-normal text-nightBlue">{review}</p>
+      <p className="text-[15px] mt-3 font-medium text-nightBlue">{review}</p>
       <div className="border-t w-full border-[#EDEDED] border-solid flex justify-start items-center gap-3 pt-5 mt-3">
         <img
           src={img}
@@ -31,7 +31,7 @@ const ReviewBox = React.memo(function ({ data, dataIndex, slideIndex }) {
           alt=""
         />
         <div className="flex w-full justify-start items-start flex-col gap-1">
-          <h3 className="text-nightBlue capitalize text-[15px] font-normal">
+          <h3 className="text-nightBlue capitalize text-[15px] font-medium">
             {name}
           </h3>
           <p className="text-[13px] text-dusk ">{role}</p>

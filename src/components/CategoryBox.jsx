@@ -9,7 +9,7 @@ const CategoryBox = ({ img, name, courses }) => {
         />
       </div>
       <div className="flex justify-start items-start flex-col gap-1">
-        <h5 className="text-[17px] group-hover:text-purple transition-all duration-300 text-nightBlue font-normal">
+        <h5 className="text-[17px] font-medium group-hover:text-purple transition-all duration-300 text-nightBlue ">
           {name}
         </h5>
         <p className="text-dusk text-sm font-normal">{courses} Courses</p>
