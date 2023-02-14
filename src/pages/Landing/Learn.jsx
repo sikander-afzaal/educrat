@@ -101,7 +101,9 @@ const Learn = () => {
               {slides.map((elem, idx) => {
                 return (
                   <div
-                    onClick={() => ref.current.swipeTo(idx)}
+                    onClick={() => {
+                      ref.current.swipeTo(idx - currentSlideIdx);
+                    }}
                     key={idx}
                     className={`w-[8px] cursor-pointer aspect-square rounded-full ${
                       idx === currentSlideIdx ? "bg-purple" : "bg-[#FFFFFF80]"
