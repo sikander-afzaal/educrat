@@ -153,10 +153,15 @@ const PopularDropDown = ({ name, options }) => {
   };
   const dropRef = useOutsideClick(handleClickOutside);
   return (
-    <div className="relative flex w-full sm:w-auto justify-center items-center flex-col">
+    <div
+      ref={dropRef}
+      className="relative flex w-full sm:w-auto justify-center items-center flex-col"
+    >
       <button
         onClick={() => setActiveDrop((prev) => !prev)}
-        className="w-full sm:w-[143px] h-[40px] flex justify-between items-center px-3 bg-[#EEF2F6] rounded-lg text-nightBlue text-sm font-normal border-none capitalize "
+        className={`w-full sm:w-[143px] h-[40px] flex justify-between items-center px-3 bg-[#EEF2F6] ${
+          activeDrop ? "rounded-tr-lg rounded-tl-lg" : "rounded-lg"
+        } text-nightBlue text-sm font-normal  border-none capitalize `}
       >
         {dropVal}{" "}
         <svg
@@ -165,7 +170,7 @@ const PopularDropDown = ({ name, options }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-3 h-3"
+          className={`w-3 h-3 ${activeDrop ? "rotate-180" : "rotate-0"}`}
         >
           <path
             strokeLinecap="round"
@@ -175,10 +180,7 @@ const PopularDropDown = ({ name, options }) => {
         </svg>
       </button>
       {activeDrop && (
-        <div
-          ref={dropRef}
-          className="flex absolute top-full left-0 w-full justify-start items-start flex-col bg-[#EEF2F6] rounded-br-lg rounded-bl-lg  px-2 py-2"
-        >
+        <div className="flex z-40 absolute top-full left-0 w-full justify-start items-start flex-col bg-[#EEF2F6] rounded-br-lg rounded-bl-lg  px-2 py-2">
           {options.map((elem, idx) => {
             return (
               <p

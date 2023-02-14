@@ -1,3 +1,4 @@
+import { useState } from "react";
 import CategoryBox from "../../components/CategoryBox";
 
 const Categories = () => {
@@ -43,6 +44,7 @@ const Categories = () => {
       courses: "573+",
     },
   ];
+  const [selectedCategory, setSelectedCategory] = useState("companies");
   return (
     <div className="wrapper mt-10">
       <div className="contain flex-col items-center justify-start">
@@ -55,19 +57,54 @@ const Categories = () => {
             </p>
           </div> */}
           <div className="flex justify-center flex-wrap items-center gap-3">
-            <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2 text-purple text-[15px] font-normal">
+            <button
+              onClick={() => setSelectedCategory("companies")}
+              className={` hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2  text-[15px] font-normal ${
+                selectedCategory === "companies"
+                  ? "bg-purple text-white"
+                  : "bg-[#6440FB12] text-purple"
+              }`}
+            >
               For Companies
             </button>
-            <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2 text-purple text-[15px] font-normal">
+            <button
+              onClick={() => setSelectedCategory("healthcare")}
+              className={` hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2  text-[15px] font-normal ${
+                selectedCategory === "healthcare"
+                  ? "bg-purple text-white"
+                  : "bg-[#6440FB12] text-purple"
+              }`}
+            >
               For Healthcare Professionals
             </button>
-            <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2 text-purple text-[15px] font-normal">
+            <button
+              onClick={() => setSelectedCategory("everyone")}
+              className={` hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2  text-[15px] font-normal ${
+                selectedCategory === "everyone"
+                  ? "bg-purple text-white"
+                  : "bg-[#6440FB12] text-purple"
+              }`}
+            >
               For Everyone
             </button>
-            <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2 text-purple text-[15px] font-normal">
+            <button
+              onClick={() => setSelectedCategory("market")}
+              className={` hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2  text-[15px] font-normal ${
+                selectedCategory === "market"
+                  ? "bg-purple text-white"
+                  : "bg-[#6440FB12] text-purple"
+              }`}
+            >
               For Market Research Agencies
             </button>
-            <button className="bg-[#6440FB12] hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2 text-purple text-[15px] font-normal">
+            <button
+              onClick={() => setSelectedCategory("all")}
+              className={` hover:bg-purple hover:text-white transition-all duration-300 rounded-lg h-[50px] w-full sm:w-auto px-[29px] border-none flex justify-center items-center gap-2  text-[15px] font-normal ${
+                selectedCategory === "all"
+                  ? "bg-purple text-white"
+                  : "bg-[#6440FB12] text-purple"
+              }`}
+            >
               All Categories{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
