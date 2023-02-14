@@ -22,10 +22,8 @@ const Trusted = () => {
           />
         </div>
         <div className="flex justify-start max-w-[520px] items-center text-center lg:text-left lg:items-start flex-col gap-5">
-          <h2 className="text-nightBlue text-[30px] font-bold max-w-[300px]">
-            Trusted By Best Teachers
-          </h2>
-          <p className="text-dusk font-normal text-[15px]">
+          <h2 className="title max-w-[300px]">Trusted By Best Teachers</h2>
+          <p className="sub">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt.
           </p>

@@ -1,5 +1,9 @@
 import Categories from "./Categories";
 import Hero from "./Hero";
+import Instructors from "./Instructors";
+import Learn from "./Learn";
+import Popular from "./Popular";
+import Skills from "./Skills";
 import Trusted from "./Trusted";
 
 const Landing = () => {
@@ -8,6 +12,10 @@ const Landing = () => {
       <Hero />
       <Categories />
       <Trusted />
+      <Popular />
+      <Learn />
+      <Skills />
+      <Instructors />
     </div>
   );
 };
