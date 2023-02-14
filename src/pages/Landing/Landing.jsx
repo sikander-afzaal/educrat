@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Instructors from "./Instructors";
 import Learn from "./Learn";
 import Popular from "./Popular";
+import Register from "./Register";
 import Skills from "./Skills";
 import Trusted from "./Trusted";
 
@@ -16,6 +17,7 @@ const Landing = () => {
       <Learn />
       <Skills />
       <Instructors />
+      <Register />
     </div>
   );
 };
