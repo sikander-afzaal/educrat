@@ -33,7 +33,13 @@
   font-weight: 500;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("/fonts/sofia_pro_regular-webfont.woff2") format("woff2"),
+    url("/fonts/sofia_pro_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,4 +57,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  .maskTrusted {
+    -webkit-mask-image: url("/trusted-bg.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: url("/trusted-bg.png");
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  }
 }

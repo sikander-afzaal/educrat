@@ -2,9 +2,9 @@ import { useState } from "react";
 import NavDropDown from "../components/NavDropDown";
 
 const Header = () => {
-  const [headerToggle, setHeaderToggle] = useState(true);
+  const [headerToggle, setHeaderToggle] = useState(false);
   return (
-    <div className="wrapper fixed py-3 top-0 left-0 z-[50]">
+    <div className="wrapper bg-white shadow-shadow1 fixed py-3 top-0 left-0 z-[50]">
       {headerToggle && (
         <div
           onClick={() => setHeaderToggle(false)}
@@ -20,7 +20,7 @@ const Header = () => {
           <div
             className={`flex justify-start lg:justify-center items-center sm:items-start lg:items-center lg:overflow-visible overflow-y-auto gap-6 lg:gap-3 2xl:gap-6 fixed top-0 ${
               headerToggle ? "right-0" : "-right-[900px]"
-            } lg:static h-full w-full max-w-[450px] lg:w-auto lg:h-auto lg:max-w-none lg:flex-row flex-col lg:p-0 px-[3rem] py-[5rem] transition-all duration-1000 z-[90] bg-white border-l-2 border-solid border-nightBlue lg:border-none`}
+            } lg:static h-full w-full max-w-[450px] lg:w-auto lg:h-auto lg:max-w-none lg:flex-row flex-col lg:p-0 px-[3rem] py-[5rem] transition-all duration-1000 z-[90] lg:bg-transparent bg-white border-l-2 border-solid border-nightBlue lg:border-none`}
           >
             <NavDropDown name="Home" />
             <NavDropDown name="Courses" />
@@ -45,7 +45,7 @@ const Header = () => {
           </div>
         </nav>
         <div className="flex justify-start items-center gap-6">
-          <div className="hidden xl:flex justify-start items-center gap-3 border border-mercury border-solid rounded px-3 w-[250px] 2xl:w-[450px] h-[50px]">
+          <div className="hidden xl:flex justify-start bg-white items-center gap-3 border border-mercury border-solid rounded px-3 w-[250px] 2xl:w-[450px] h-[50px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -63,7 +63,7 @@ const Header = () => {
             <input
               type="text"
               placeholder="What Do You Want To Learn"
-              className="text-[#77838F] w-full text-base font-normal border-none outline-none h-full"
+              className="text-[#77838F] bg-transparent w-full text-base font-normal border-none outline-none h-full"
             />
           </div>
           <svg
