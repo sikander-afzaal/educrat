@@ -11,7 +11,7 @@ const Header = () => {
           className="lg:hidden block fixed top-0 left-0 bg-black opacity-60 z-[88] w-full h-full"
         ></div>
       )}
-      <div className="flex justify-between items-center gap-2 w-[90%]">
+      <div className="flex justify-between items-center gap-5 w-[90%]">
         <nav className="flex justify-start items-center gap-5 2xl:gap-10">
           <div className="flex justify-center items-center gap-3">
             <img src="/logo.png" className="w-[47px] object-contain" alt="" />
@@ -114,7 +114,10 @@ const Header = () => {
             </svg>
           )}
           <div className="hidden lg:flex justify-center items-center gap-6">
-            <a href="#" className="text-[15px] font-normal text-darkIndigo">
+            <a
+              href="#"
+              className="text-[15px] min-w-max font-normal text-darkIndigo"
+            >
               Log in
             </a>
             <button className="text-darkIndigo font-normal text-[15px] bg-sunglow rounded-lg w-[140px] h-[50px] border-2 border-solid border-sunglow hover:bg-transparent transition-all duration-300 ">
