@@ -45,12 +45,13 @@ const Hero = () => {
             Designer, Developer, Web, IOS, PHP, Senior, Engineer
           </p>
         </div>
-        <div className="bg-white w-full  max-w-[620px] shadow-shadow2 pb-3 rounded-lg">
+        <div className="bg-white w-full  max-w-[620px]  pb-3 rounded-lg">
           <img src="/hero-img.png" className="object-contain w-full " alt="" />
         </div>
       </div>
     </div>
   );
 };
+// shadow-shadow2
 
 export default Hero;
